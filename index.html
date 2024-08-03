@@ -1,0 +1,38 @@
+
+<form name="selectForm">
+  <p>
+    <label for="tipoMusica">
+     Escolha alguns tipos de música, em<br> 
+     seguida, clique no botão abaixo:
+    </label>
+    <br><br>
+    <select id="tipoMusica" name="tipoMusica" multiple="multiple" style="height:150px;">
+      <option selected="selected">Evangelica</option>
+      <option>Jazz</option>
+      <option>Sertaneja</option>
+      <option>Pop</option>
+      <option>Classica</option>
+      <option>Rock</option>
+    </select>
+  </p>
+  <p><input id="btn" type="button" value="Quantas foram selecionadas?" title="Clique aqui!"/></p>
+</form>
+
+<script>
+  function opcoes(selectObject) {
+    var numeroSelecionado = 0;
+    for (var i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        numeroSelecionado++;
+      }
+    }
+    return numeroSelecionado;
+  }
+
+  var btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    alert("Total de opções selecionadas: " +
+           opcoes(document.selectForm.tipoMusica),
+    );
+  });
+</script>
