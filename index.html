@@ -1,0 +1,48 @@
+<html>
+<head>
+<style>
+/* 2a aula... 1a atividade... */
+a {
+ color:orange;
+}
+</style>
+<script>
+/* 2a aula... 2a atividade... */
+alert('Ola, bom dia!!!');
+
+//2a aula... 3a atividade...
+function levantar_as_maos(idx) {
+ var passo;
+ var idx2;
+ for (passo = 1; passo <= idx; passo++) {
+  alert(passo+') Levante sua mao para o alto.');
+  idx2 = (idx + 1);
+ }
+ alert((idx2-1)+' vezes voce levantou sua mao!');
+}
+
+//2a aula... 4a atividade...
+function somar() {
+  var num1 = prompt('Por favor, digite o 1o numero:');
+  var num2 = prompt('Por favor, digite o 2o numero:');
+  var total = (num1+num2);
+  alert("Total da Soma: "+total);
+}
+</script>
+<title>Pagina da Minha 2a Aula</title>
+</head>
+<body>
+<form>
+ <h1>  
+ <font size="20">R$150</font>
+ <input type="text" value="150">
+ </h1>
+  <button  onclick="javascript: levantar_as_maos(3);">Quantas Vezes Vou Levantar as Maos?</button>
+  &nbsp;&nbsp;&nbsp;
+  <button  onclick="javascript: somar();">Vamos Somar?</button>
+  &nbsp;&nbsp;&nbsp;
+  <a href="#" onclick="javascript: alert(123);">Clique e descubra!</a>
+</form>
+</body>
+</html>
+
